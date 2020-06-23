@@ -1,4 +1,4 @@
-package deckofcards;
+package deckofcards.elements;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,10 +14,23 @@ public class Deck {
 
 	public Deck() {
 		cards = new ArrayList<>();
-		for (int i = 1; i <= 13; i++) {
+		for (int i = 2; i <= 10; i++) {
 			for (CardSuit suit : CardSuit.values()) {
-				this.cards.add(new Card(suit, i));
+				this.cards.add(new Card(suit, String.valueOf(i)));
 			}
+		}
+
+		for (CardSuit suit : CardSuit.values()) {
+			this.cards.add(new Card(suit, "J"));
+		}
+		for (CardSuit suit : CardSuit.values()) {
+			this.cards.add(new Card(suit, "Q"));
+		}
+		for (CardSuit suit : CardSuit.values()) {
+			this.cards.add(new Card(suit, "K"));
+		}
+		for (CardSuit suit : CardSuit.values()) {
+			this.cards.add(new Card(suit, "A"));
 		}
 	}
 

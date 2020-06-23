@@ -1,13 +1,13 @@
-package deckofcards;
+package deckofcards.elements;
 
 import deckofcards.enums.CardSuit;
 
 public class Card {
 
 	private CardSuit suit;
-	private int cardValue;
+	private String cardValue;
 
-	public Card(CardSuit suit, int cardValue) {
+	public Card(CardSuit suit, String cardValue) {
 		this.suit = suit;
 		this.cardValue = cardValue;
 	}
@@ -16,7 +16,7 @@ public class Card {
 		return suit;
 	}
 
-	public int getCardValue() {
+	public String getCardValue() {
 		return cardValue;
 	}
 
